@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstui);
 
-        ui1Yes = findViewById(R.id.ui1Yes);
+        ui1Yes = findViewById(R.id.ui2Metric);
 
         ui1Yes.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                setContentView(R.layout.secondui);
+                setContentView(R.layout.thirdui);
             }
         });
     }
