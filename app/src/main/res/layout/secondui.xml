@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your preferred system"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -27,7 +28,7 @@
         app:layout_constraintVertical_bias="0.384">
 
         <Button
-            android:id="@+id/ui2Metric"
+            android:id="@+id/ui1Yes"
             android:layout_width="122dp"
             android:layout_height="100dp"
             android:backgroundTint="#7986CB"
@@ -38,7 +39,7 @@
             tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         <Button
-            android:id="@+id/ui2Imperial"
+            android:id="@+id/ui1No"
             android:layout_width="120dp"
             android:layout_height="99dp"
             android:backgroundTint="#7986CB"
