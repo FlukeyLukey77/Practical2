@@ -2,6 +2,7 @@ package com.example.practical2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -35,12 +36,13 @@ public class ThirdActivity extends AppCompatActivity
         heightSlider = findViewById(R.id.heightSlider);
         weightInputText = findViewById(R.id.weightInputText);
         heightInputText = findViewById(R.id.heightInputText);
-        ui3Next = findViewById(R.id.ui1Yes);
+        ui3Next = findViewById(R.id.ui3Next);
 
         Intent intent = getIntent();
 
         int numberSystem = intent.getIntExtra("numberSystem", 0);
         weightSlider.setOnSeekBarChangeListener(weightSliderChangeListener);
+        heightSlider.setOnSeekBarChangeListener(heightSliderChangeListener);
 
         if (numberSystem == 0)
         {
@@ -55,8 +57,32 @@ public class ThirdActivity extends AppCompatActivity
             heightUnits.setText("in");
         }
 
-        int weightSlideInput;
-        weightSlideInput = weightSlider.getProgress();
+        ui3Next.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                int finalWeight = 0;
+                int finalHeight = 0;
+                try
+                {
+                    finalWeight = Integer.parseInt(weightInputText.getText().toString());
+                    finalHeight = Integer.parseInt(heightInputText.getText().toString());
+                }
+                catch(Exception e)
+                {
+                    weightInputText.setText("Error");
+                    heightInputText.setText("Error");
+                }
+
+                Intent activity4Intent = new Intent(ThirdActivity.this, FourthActivity.class);
+                activity4Intent.putExtra("Weight", finalWeight);
+                activity4Intent.putExtra("Height", finalHeight);
+                activity4Intent.putExtra("numberSystem", numberSystem);
+                ThirdActivity.this.startActivity(activity4Intent);
+            }
+        });
+
     }
 
     SeekBar.OnSeekBarChangeListener weightSliderChangeListener = new SeekBar.OnSeekBarChangeListener()
@@ -64,17 +90,34 @@ public class ThirdActivity extends AppCompatActivity
         @Override
         public void onProgressChanged(SeekBar weightSlide, int weightSlideInput, boolean b)
         {
-            //massUnits.setText(weightSlideInput);
+            weightInputText.setText(Integer.toString(weightSlideInput));
         }
-
         @Override
-        public void onStartTrackingTouch(SeekBar weightInput)
+        public void onStartTrackingTouch(SeekBar seekBar)
         {
 
         }
-
         @Override
-        public void onStopTrackingTouch(SeekBar weightInput)
+        public void onStopTrackingTouch(SeekBar seekBar)
+        {
+
+        }
+    };
+
+    SeekBar.OnSeekBarChangeListener heightSliderChangeListener = new SeekBar.OnSeekBarChangeListener()
+    {
+        @Override
+        public void onProgressChanged(SeekBar heightSlide, int heightSlideInput, boolean b)
+        {
+            heightInputText.setText(Integer.toString(heightSlideInput));
+        }
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar)
+        {
+
+        }
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar)
         {
 
         }
