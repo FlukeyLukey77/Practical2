@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/drawable/rounded_corner.xml" value="0.3135" />
+        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout-large/fourthuiTablet.xml" value="0.17440912795436023" />
+        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout-large/fourthuitablet.xml" value="0.6666666666666666" />
+        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout-sw600dp/fourthui.xml" value="0.16666666666666666" />
+        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout-w600dp/fourthuitablet.xml" value="0.4466666666666667" />
         <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/activity_main.xml" value="0.542572463768116" />
         <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/firstui.xml" value="0.6" />
-        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/fourthui.xml" value="0.3268359020852221" />
+        <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/fourthui.xml" value="0.4519025224454895" />
         <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/fourthuiTablet.xml" value="0.4519025224454895" />
         <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/secondui.xml" value="0.542572463768116" />
         <entry key="..\:/Google Drive/University/Year 4/Semester2/MAD/Practical2/app/src/main/res/layout/thirdui.xml" value="0.45085470085470086" />

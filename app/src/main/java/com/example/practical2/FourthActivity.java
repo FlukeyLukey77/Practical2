@@ -49,12 +49,14 @@ public class FourthActivity extends AppCompatActivity
         {
             weightMessage.setText("Your weight is " + weight + "kg");
             heightMessage.setText("Your height is " + height + "cm");
+
             BMI = (float)weight/(((float)height/100) * ((float)height/100));
         }
         else if(numberSystem == 1)
         {
             weightMessage.setText("Your weight is " + weight + "lb");
             heightMessage.setText("Your height is " + height + "in");
+
             BMI = ((float)weight/(((float)height) * ((float)height))) * 703;
         }
         else
