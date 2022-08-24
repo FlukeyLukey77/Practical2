@@ -62,24 +62,24 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                int finalWeight = 0;
-                int finalHeight = 0;
+                int finalWeight = 1;
+                int finalHeight = 1;
                 try
                 {
                     finalWeight = Integer.parseInt(weightInputText.getText().toString());
                     finalHeight = Integer.parseInt(heightInputText.getText().toString());
+
+                    Intent activity4Intent = new Intent(ThirdActivity.this, FourthActivity.class);
+                    activity4Intent.putExtra("Weight", finalWeight);
+                    activity4Intent.putExtra("Height", finalHeight);
+                    activity4Intent.putExtra("numberSystem", numberSystem);
+                    ThirdActivity.this.startActivity(activity4Intent);
                 }
                 catch(Exception e)
                 {
                     weightInputText.setText("Error");
                     heightInputText.setText("Error");
                 }
-
-                Intent activity4Intent = new Intent(ThirdActivity.this, FourthActivity.class);
-                activity4Intent.putExtra("Weight", finalWeight);
-                activity4Intent.putExtra("Height", finalHeight);
-                activity4Intent.putExtra("numberSystem", numberSystem);
-                ThirdActivity.this.startActivity(activity4Intent);
             }
         });
 
