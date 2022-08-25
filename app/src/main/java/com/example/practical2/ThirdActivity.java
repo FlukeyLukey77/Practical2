@@ -62,8 +62,8 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                int finalWeight = 1;
-                int finalHeight = 1;
+                int finalWeight = 0;
+                int finalHeight = 0;
                 try
                 {
                     finalWeight = Integer.parseInt(weightInputText.getText().toString());
